@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Statistics
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="wildFireData">
+      <ion-segment-button value="Count">
+        Count
+      </ion-segment-button>
+      <ion-segment-button value="Cause">
+        Cause
+      </ion-segment-button>
+      <ion-segment-button value="Geography">
+        Geography
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="wildFireData">
+    <ion-list *ngSwitchCase="'Count'">
+      <ion-card>
+
+        <img src="assets/imgs/yearly.png">
+        <img src="assets/imgs/monthly.png">
+        <img src="assets/imgs/daily.png">
+        <img src="assets/imgs/day of year.png">
+
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Cause'">
+      <ion-card>
+
+        <img src="assets/imgs/Cause.png">
+        <img src="assets/imgs/sizebycause.png">
+        <img src="assets/imgs/burntimebycause.png">
+
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Geography'">
+      <ion-card>
+
+        <img src="assets/imgs/geography.png">
+
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

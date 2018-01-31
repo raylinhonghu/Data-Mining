@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Prediction</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+
+          <ion-item>
+            <ion-label fixed>Latitude</ion-label>
+            <ion-input readonly = "true" [value]= "latitude" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>Longitude</ion-label>
+            <ion-input readonly = "true" [value]= "longitude" ></ion-input>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-input readonly="true" [value] = "'July 15th, 2018'"> </ion-input>
+          </ion-item>
+
+  </ion-list> 
+ 
+  <ion-content padding>
+         <div #map id="map"></div>
+         <button ion-button full color="dark" (click)="sampleHttpRequest()"> PREDICT </button>
+  </ion-content>
+
